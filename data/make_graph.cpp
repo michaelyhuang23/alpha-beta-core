@@ -1,5 +1,5 @@
 /*
-convert bipartite graph input to adjancy graph input
+convert bipartite graph input from konect format to the format used by this codebase
 For example
 FROM
 % bip unweighted
@@ -18,29 +18,13 @@ FROM
 6 1
 6 2
 
-TO
-AdjacencyGraph
-10
-13
-0
-3
-5
-7
-9
-11
-6
-7
-8
-6
-8
-9
-8
-6
-8
-10
-7
-6
-7
+meta file: 
+n1
+n2
+m (number of undirected edges)
+
+edge file:
+v1 v2 (all edges are undirected and appear only once)
 */
 
 #include <iostream>
@@ -48,6 +32,7 @@ AdjacencyGraph
 #include <string>
 #include <sstream>
 #include <vector>
+#include <unordered_set>
 
 using namespace std;
 
@@ -82,15 +67,16 @@ int main(){
         infile.ignore(256, '\n');
     }
     numEdge = 0;
+	unordered_set<long long> usedE;
     while(getline(infile,line)){
         istringstream ss(line);
         ss >> first >> second;
         first--;
         second--;
-        second += numA;
+		if(usedE.find((long long)first*(numB+5)+second) != usedE.end()) continue;
+		usedE.insert((long long)first*(numB+5)+second);
         outfile << first <<" "<< second <<endl;
-        outfile << second <<" "<< first <<endl;
-        numEdge += 2;
+        numEdge += 1;
     }
     infile.close();
     outfile.close();
