@@ -161,8 +161,8 @@ void BiGraph::loadGraph(string dir)
 	int u, v;
 	int r;
 
-	string metaFile = dir + "graph.meta";
-	string edgeFile = dir + "graph.e";
+	string metaFile = dir + ".meta";
+	string edgeFile = dir + ".e";
 
 	FILE * metaGraph = fopen(metaFile.c_str(), "r");
 	FILE * edgeGraph = fopen(edgeFile.c_str(), "r");
