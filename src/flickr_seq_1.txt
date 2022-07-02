@@ -1,0 +1,3 @@
+start ComShrDecom for ../data/flickr
+n1: 395979, n2: 103631
+run time: 34.2394

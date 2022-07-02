@@ -1,0 +1,3 @@
+start ComShrDecom for ../data/reuters
+n1: 781265, n2: 283911
+run time: 203.059

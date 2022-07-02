@@ -1,0 +1,7 @@
+./abcore -ComShrDecom ../data/flickr > flickr_seq_1.txt
+./abcore -ComShrDecom ../data/flickr > flickr_seq_2.txt
+./abcore -ComShrDecom ../data/flickr > flickr_seq_3.txt
+./abcore -ComShrDecom ../data/reuters > reuters_seq_1.txt
+./abcore -ComShrDecom ../data/reuters > reuters_seq_2.txt
+./abcore -ComShrDecom ../data/reuters > reuters_seq_3.txt
+
