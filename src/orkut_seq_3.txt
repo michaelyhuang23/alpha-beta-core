@@ -1,0 +1,3 @@
+start ComShrDecom for ../data/orkut
+n1: 2783196, n2: 8730857
+run time: 3628.42

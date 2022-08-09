@@ -1,0 +1,3 @@
+start ComShrDecom for ../data/trackers
+n1: 27665730, n2: 12756244
+run time: 2747.25

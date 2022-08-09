@@ -1,0 +1,3 @@
+start ComShrDecom for ../data/livejournal
+n1: 3201203, n2: 7489073
+run time: 392.367

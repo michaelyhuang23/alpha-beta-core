@@ -1,0 +1,3 @@
+start ComShrDecom for ../data/epinions
+n1: 120492, n2: 755760
+run time: 57.9413
