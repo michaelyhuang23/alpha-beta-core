@@ -1,0 +1,4 @@
+start ParallelDecom for ../data/flickr
+n1: 395979, n2: 103631
+multithread thread_num: 1
+running time: 2.6e-07

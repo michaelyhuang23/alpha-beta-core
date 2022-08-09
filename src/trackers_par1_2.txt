@@ -1,0 +1,4 @@
+start ParallelDecom for ../data/trackers
+n1: 27665730, n2: 12756244
+multithread thread_num: 1
+running time: 2.11e-07

@@ -1,0 +1,4 @@
+start ParallelDecom for ../data/epinions
+n1: 120492, n2: 755760
+multithread thread_num: 30
+running time: 6.1288

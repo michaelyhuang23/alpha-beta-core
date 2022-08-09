@@ -1,0 +1,4 @@
+start ParallelDecom for ../data/trec
+n1: 556077, n2: 1173225
+multithread thread_num: 16
+running time: 97.9163

@@ -1,0 +1,62 @@
+
+for((s=1; s<=16; s*=2)); do
+	./abcore -ParallelDecom ../data/flickr $s > flickr_par_1.txt
+	./abcore -ParallelDecom ../data/flickr $s > flickr_par_2.txt
+	./abcore -ParallelDecom ../data/flickr $s > flickr_par_3.txt
+
+	./abcore -ParallelDecom ../data/reuters $s > reuters_par_1.txt
+	./abcore -ParallelDecom ../data/reuters $s > reuters_par_2.txt
+	./abcore -ParallelDecom ../data/reuters $s > reuters_par_3.txt
+
+	./abcore -ParallelDecom ../data/trec $s > trec_par_1.txt
+	./abcore -ParallelDecom ../data/trec $s > trec_par_2.txt
+	./abcore -ParallelDecom ../data/trec $s > trec_par_3.txt
+
+	./abcore -ParallelDecom ../data/epinions $s > epinions_par_1.txt
+	./abcore -ParallelDecom ../data/epinions $s > epinions_par_2.txt
+	./abcore -ParallelDecom ../data/epinions $s > epinions_par_3.txt
+
+	./abcore -ParallelDecom ../data/livejournal $s > livejournal_par_1.txt
+	./abcore -ParallelDecom ../data/livejournal $s > livejournal_par_2.txt
+	./abcore -ParallelDecom ../data/livejournal $s > livejournal_par_3.txt
+
+	./abcore -ParallelDecom ../data/trackers $s > trackers_par_1.txt
+	./abcore -ParallelDecom ../data/trackers $s > trackers_par_2.txt
+	./abcore -ParallelDecom ../data/trackers $s > trackers_par_3.txt
+
+	./abcore -ParallelDecom ../data/orkut $s > orkut_par_1.txt
+	./abcore -ParallelDecom ../data/orkut $s > orkut_par_2.txt
+	./abcore -ParallelDecom ../data/orkut $s > orkut_par_3.txt
+done
+
+for((s=30; s<=60; s*=2)); do
+	./abcore -ParallelDecom ../data/flickr $s > flickr_par_1.txt
+	./abcore -ParallelDecom ../data/flickr $s > flickr_par_2.txt
+	./abcore -ParallelDecom ../data/flickr $s > flickr_par_3.txt
+
+	./abcore -ParallelDecom ../data/reuters $s > reuters_par_1.txt
+	./abcore -ParallelDecom ../data/reuters $s > reuters_par_2.txt
+	./abcore -ParallelDecom ../data/reuters $s > reuters_par_3.txt
+
+	./abcore -ParallelDecom ../data/trec $s > trec_par_1.txt
+	./abcore -ParallelDecom ../data/trec $s > trec_par_2.txt
+	./abcore -ParallelDecom ../data/trec $s > trec_par_3.txt
+
+	./abcore -ParallelDecom ../data/epinions $s > epinions_par_1.txt
+	./abcore -ParallelDecom ../data/epinions $s > epinions_par_2.txt
+	./abcore -ParallelDecom ../data/epinions $s > epinions_par_3.txt
+
+	./abcore -ParallelDecom ../data/livejournal $s > livejournal_par_1.txt
+	./abcore -ParallelDecom ../data/livejournal $s > livejournal_par_2.txt
+	./abcore -ParallelDecom ../data/livejournal $s > livejournal_par_3.txt
+
+	./abcore -ParallelDecom ../data/trackers $s > trackers_par_1.txt
+	./abcore -ParallelDecom ../data/trackers $s > trackers_par_2.txt
+	./abcore -ParallelDecom ../data/trackers $s > trackers_par_3.txt
+
+	./abcore -ParallelDecom ../data/orkut $s > orkut_par_1.txt
+	./abcore -ParallelDecom ../data/orkut $s > orkut_par_2.txt
+	./abcore -ParallelDecom ../data/orkut $s > orkut_par_3.txt
+done
+
+

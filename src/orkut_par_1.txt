@@ -1,0 +1,3 @@
+start ParallelDecom for ../data/orkut
+n1: 2783196, n2: 8730857
+multithread thread_num: 60

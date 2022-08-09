@@ -1,0 +1,4 @@
+start ParallelDecom for ../data/livejournal
+n1: 3201203, n2: 7489073
+multithread thread_num: 16
+running time: 70.8965

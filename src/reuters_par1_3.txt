@@ -1,0 +1,4 @@
+start ParallelDecom for ../data/reuters
+n1: 781265, n2: 283911
+multithread thread_num: 1
+running time: 1.93e-07
