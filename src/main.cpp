@@ -53,16 +53,24 @@ int main(int argc, char **argv) {
 	else if (exec_type == "-Query") {
 		BiGraph g(argv[2]);
 		coreIndexKCore(g);
+		auto start1 = chrono::system_clock::now();
 		vector<vector<bicore_index_block*>> bicore_index_u; vector<vector<bicore_index_block*>> bicore_index_v;
 		build_bicore_index(g, bicore_index_u, bicore_index_v);
+		auto end1 = chrono::system_clock::now();
+		chrono::duration<double> time1 = end1 - start1;
+		cout<<"construction time: "<<time1.count()<<endl;
 		vector<bool> left; vector<bool> right;
 		// all the vertices in query result are set as true
 		left.resize(g.num_v1, false); right.resize(g.num_v2, false);
 		auto start = chrono::system_clock::now();
-		retrieve_via_bicore_index(g, bicore_index_u, bicore_index_v, left, right, stoi(argv[3]), stoi(argv[4]));
+		for(int i=0;i<10000;i++){
+			a = rand()%99+2;
+			b = rand()%99+2;
+			retrieve_via_bicore_index(g, bicore_index_u, bicore_index_v, left, right, a, b);
+		}
 		auto end = chrono::system_clock::now();
 		chrono::duration<double> time = end - start;
-		cout << "query time: " << time.count() << endl;
+		cout << "query time: " << time.count()/10000.0 << endl;
 	}
 	else if (exec_type == "-BiCore-Index-Ins") {
 		BiGraph g(argv[2]);
