@@ -5,6 +5,7 @@
 #include "preprocessing.h"
 #include "incremental_test.h"
 #include <ctime>
+#include <fstream>
 #include "experiment.h"
 #include "paper.h"
 #include "mischievous.h"
@@ -62,11 +63,16 @@ int main(int argc, char **argv) {
 		vector<bool> left; vector<bool> right;
 		// all the vertices in query result are set as true
 		left.resize(g.num_v1, false); right.resize(g.num_v2, false);
+
+		cout<<"reading cores from "<<argv[3]<<endl;
+		ifstream fin(argv[3]);
+		vector<int> alphas(10000,-1), betas(10000,-1);
+		for(int i=0;i<10000;i++)
+			fin >> alphas[i] >> betas[i];
+		
 		auto start = chrono::system_clock::now();
 		for(int i=0;i<10000;i++){
-			a = rand()%99+2;
-			b = rand()%99+2;
-			retrieve_via_bicore_index(g, bicore_index_u, bicore_index_v, left, right, a, b);
+			retrieve_via_bicore_index(g, bicore_index_u, bicore_index_v, left, right, alphas[i], betas[i]);
 		}
 		auto end = chrono::system_clock::now();
 		chrono::duration<double> time = end - start;
