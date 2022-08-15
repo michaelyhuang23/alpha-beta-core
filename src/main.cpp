@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
 		}
 		auto end = chrono::system_clock::now();
 		chrono::duration<double> time = end - start;
-		cout << "query time: " << time.count()/10000.0 << endl;
+		cout << "query time: " << time.count() << endl;
 	}
 	else if (exec_type == "-BiCore-Index-Ins") {
 		BiGraph g(argv[2]);
